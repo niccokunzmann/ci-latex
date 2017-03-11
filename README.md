@@ -17,7 +17,9 @@ You can use the container in your runner like this:
 
     image: niccokunzmann/ci-latex
 
+## Related Work
 
+- https://github.com/mattmahn/docker-latex
 
 
 [hub]: https://hub.docker.com/r/niccokunzmann/ci-latex
