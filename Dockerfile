@@ -10,7 +10,8 @@ RUN mkdir texlive && \
     wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O- | tar zxf - && \
     cd *
 
-ADD install.input /tmp/
+# using installation profile http://tug.org/texlive/quickinstall.html
+ADD installation.profile texlive/
 RUN cd texlive/* && \
-    ./install-tl --gui text < /tmp/install.input
+    ./install-tl --profile ../installation.profile
 
