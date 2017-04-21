@@ -16,6 +16,27 @@ You can pull it with
 You can use the container in your runner like this:
 
     image: niccokunzmann/ci-latex
+    
+## Example .gitlab-ci.yml
+
+If you paper is in the root folder of the repository and named `paper.tex`, your `.gitlab-ci.yml` can look like this:
+
+```
+image: niccokunzmann/ci-latex
+
+stages:
+  - deploy
+
+expose:
+  stage: deploy
+  script: 
+  - pdflatex -interaction=nonstopmode -halt-on-error paper.tex
+  artifacts:
+    paths:
+    - paper.pdf
+```
+
+[See the documentation](https://docs.gitlab.com/ce/ci/yaml/README.html#image-and-services) for how to change your `.gitlab-ci.yml`.
 
 ## Related Work
 
