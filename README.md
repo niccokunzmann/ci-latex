@@ -1,4 +1,7 @@
 # ci-latex
+
+[![Docker Build Status](https://img.shields.io/docker/build/niccokunzmann/ci-latex.svg)](https://hub.docker.com/r/niccokunzmann/ci-latex/builds/)
+
 A docker container for Gitlab CI to build with Latex.
 
 This container [builds weekly][cron-job].
@@ -17,7 +20,7 @@ You can use the container in your runner like this:
 
     image: niccokunzmann/ci-latex
     
-## Example .gitlab-ci.yml
+### Example .gitlab-ci.yml
 
 If you paper is in the root folder of the repository and named `paper.tex`, your `.gitlab-ci.yml` can look like this:
 
