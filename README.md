@@ -20,6 +20,14 @@ You can build the container yourself using the `docker` command:
 
     docker build -t niccokunzmann/ci-latex .
 
+## Local Latex
+
+Suppose you are in the console in the folder where your
+ `document.tex` should be built, so `ls` shows `document.tex`.
+ Run this, to build the file.
+
+     docker run -v "`pwd`:/thesis" --rm -it niccokunzmann/ci-latex  bash -c 'cd thesis; /usr/local/texlive/2017/bin/x86_64-linux/pdflatex document.tex'
+
 ## Gitlab
 
 You can use the container in your runner like this:
