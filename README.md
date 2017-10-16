@@ -14,12 +14,18 @@ You can pull it with
 
     docker pull niccokunzmann/ci-latex
 
+## Local Build
+
+You can build the container yourself using the `docker` command:
+
+    docker build -t niccokunzmann/ci-latex .
+
 ## Gitlab
 
 You can use the container in your runner like this:
 
     image: niccokunzmann/ci-latex
-    
+
 ### Example .gitlab-ci.yml
 
 If you paper is in the root folder of the repository and named `paper.tex`, your `.gitlab-ci.yml` can look like this:
@@ -32,7 +38,7 @@ stages:
 
 expose:
   stage: deploy
-  script: 
+  script:
   - pdflatex -interaction=nonstopmode -halt-on-error paper.tex
   artifacts:
     paths:
