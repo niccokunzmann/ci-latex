@@ -47,11 +47,21 @@ expose:
 
 [See the documentation](https://docs.gitlab.com/ce/ci/yaml/README.html#image-and-services) for how to change your `.gitlab-ci.yml`.
 
+## Failing build and update of this repository
+
+If the repository build fails, this can be due to an outdated
+`installation.profile`.
+You can get the installation commands from the `Dockerfile,
+create the `texlive.profile` and then copy it over the
+`installation.profile`.
+
 ## Related Work
 
 - https://github.com/mattmahn/docker-latex
+- I use it to [build my master thesis][master-thesis].
 
 
 [hub]: https://hub.docker.com/r/niccokunzmann/ci-latex
 [cron-job]: https://github.com/niccokunzmann/ci-latex/tree/cron-job
 [curr]: http://tug.org/texlive/acquire-netinstall.html
+[master-thesis]: https://gitlab.quelltext.eu/niccokunzmann/masterarbeit/
