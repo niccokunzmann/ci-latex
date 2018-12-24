@@ -67,7 +67,7 @@ create the `texlive.profile` and then copy it over the
 
 - https://github.com/mattmahn/docker-latex
 - I use it to [build my master thesis][master-thesis].
-
+- [Building Latex with Travis](https://github.com/harshjv/travis-ci-latex-pdf)
 
 [hub]: https://hub.docker.com/r/niccokunzmann/ci-latex
 [cron-job]: https://github.com/niccokunzmann/ci-latex/tree/cron-job
