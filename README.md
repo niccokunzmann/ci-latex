@@ -59,7 +59,7 @@ expose:
 
 If the repository build fails, this can be due to an outdated
 `installation.profile`.
-You can get the installation commands from the `Dockerfile,
+You can get the installation commands from the `Dockerfile`,
 create the `texlive.profile` and then copy it over the
 `installation.profile`.
 
