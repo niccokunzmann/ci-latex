@@ -23,10 +23,10 @@ You can build the container yourself using the `docker` command:
 ## Local Latex
 
 Suppose you are in the console in the folder where your
- `document.tex` should be built, so `ls` shows `document.tex`.
+ `paper.tex` should be built, so `ls` shows `paper.tex`.
  Run this, to build the file.
 
-     docker run -v "`pwd`:/thesis" --rm -it niccokunzmann/ci-latex  bash -c 'cd thesis; pdflatex document.tex'
+     docker run -v "`pwd`:/thesis" --rm -it niccokunzmann/ci-latex  bash -c 'cd thesis; pdflatex paper.tex'
 
 ## Gitlab
 
@@ -54,6 +54,34 @@ expose:
 ```
 
 [See the documentation](https://docs.gitlab.com/ce/ci/yaml/README.html#image-and-services) for how to change your `.gitlab-ci.yml`.
+
+## GitHub
+
+Example `.travis.yml` derived from [12 characters translations](https://github.com/niccokunzmann/12characters-translations/).
+We assume that there is a file names `paper.tex` at the root of your repository.
+
+```
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - docker pull niccokunzmann/ci-latex
+
+script:
+  - docker run -v "`pwd`:/thesis" --rm -it niccokunzmann/ci-latex  bash -c 'cd thesis; pdflatex paper.tex'
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "... secure api key https://stackoverflow.com/a/12778315 ..."
+  file:
+    - paper.pdf
+  skip_cleanup: true
+  on:
+    branch: master
+```
 
 ## Failing build and update of this repository
 
