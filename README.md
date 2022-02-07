@@ -1,6 +1,6 @@
 # ci-latex
 
-[![Docker Build Status](https://img.shields.io/docker/build/niccokunzmann/ci-latex.svg)](https://hub.docker.com/r/niccokunzmann/ci-latex/builds/)
+<!--[![Docker Build Status](https://img.shields.io/docker/build/niccokunzmann/ci-latex.svg)](https://hub.docker.com/r/niccokunzmann/ci-latex/builds/)-->
 
 A docker container for Gitlab CI to build with Latex.
 
