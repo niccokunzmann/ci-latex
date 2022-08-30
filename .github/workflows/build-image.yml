@@ -9,7 +9,7 @@ on:
   schedule:
   # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onschedule
   # see https://crontab.guru/every-month
-  - '0 0 1 * *'
+  - cron: '0 0 1 * *'
 
 jobs:
   docker:
