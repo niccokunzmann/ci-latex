@@ -1,10 +1,10 @@
 # ci-latex
 
-<!--[![Docker Build Status](https://img.shields.io/docker/build/niccokunzmann/ci-latex.svg)](https://hub.docker.com/r/niccokunzmann/ci-latex/builds/)-->
+[![build-image](https://github.com/niccokunzmann/ci-latex/actions/workflows/build-image.yml/badge.svg)](https://github.com/niccokunzmann/ci-latex/actions/workflows/build-image.yml)
 
 A docker container for Gitlab CI to build with Latex.
 
-This container [builds weekly][cron-job].
+This container [builds monthly][cron-job].
 It uses the full, [current texlive installation][curr].
 
 ## Dockerhub
@@ -98,6 +98,6 @@ create the `texlive.profile` and then copy it over the
 - [Building Latex with Travis](https://github.com/harshjv/travis-ci-latex-pdf)
 
 [hub]: https://hub.docker.com/r/niccokunzmann/ci-latex
-[cron-job]: https://github.com/niccokunzmann/ci-latex/tree/cron-job
+[cron-job]: .github/workflows/build-image.yml
 [curr]: http://tug.org/texlive/acquire-netinstall.html
 [master-thesis]: https://gitlab.quelltext.eu/niccokunzmann/masterarbeit/
